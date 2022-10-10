@@ -42,7 +42,7 @@ void MessageQueue<T>::send(T &&msg)
 
 TrafficLight::TrafficLight()
 {
-    _currentPhase = TrafficLightPhase::red;
+    _currentPhase = TrafficLightPhase::green;
 }
 
 // needed because rule of 5
@@ -101,7 +101,7 @@ void TrafficLight::cycleThroughPhases()
       }
 
       // reset stopwatch
-	  std::chrono::high_resolution_clock::time_point t0 = std::chrono::system_clock::now();
+      std::chrono::high_resolution_clock::time_point t0 = std::chrono::system_clock::now();
       double CycleDuration = distr(eng); 
     }
 }

@@ -93,7 +93,6 @@ void TrafficLight::cycleThroughPhases()
   while (true){ 
       std::this_thread::sleep_for(std::chrono::milliseconds(100)); // sleep per iteration
       std::chrono::high_resolution_clock::time_point t1 = std::chrono::system_clock::now();
-      //std::chrono::duration<double> TimeDelta = t1 - t0;
       auto TimeDelta = std::chrono::duration_cast<std::chrono::microseconds>( t1 - t0 ).count();
       if (TimeDelta > CycleDuration){
         // toggle the current color to the other color
